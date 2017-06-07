@@ -8,11 +8,12 @@ ENV LANG='en_US.UTF-8' \
     KEYBOXVERSION='v2.90_00'
 
 ### Install Application
-RUN yum update && \
+RUN yum upgrade -y && \
     yum install -y java-1.8.0-openjdk-headless wget && \
     wget http://sshkeybox.com/releases/keybox/keybox-jetty-$KEYBOXVERSION.tar.gz -O /tmp/keybox.tar.gz && \
     tar xzf /tmp/keybox.tar.gz -C /opt && \
     yum remove -y wget && \
+    yum clean all && \
     rm -rf /tmp/* \
            /var/cache/yum/* \
            /var/tmp/*
