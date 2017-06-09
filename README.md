@@ -32,6 +32,62 @@ This variable is not mandatory and specifies the user id that will be set to run
 
 This variable is not mandatory and specifies the group id that will be set to run the application. It has default value `10020`.
 
+All possible environment variables with their default values are listed below.
+
+### `resetApplicationSSHKey`
+
+set to true to regenerate and import SSH keys. It has default value `false`
+
+
+SSH key type 'dsa', 'rsa', or 'ecdsa' for generated keys. It has default value `rsa`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### `dbPath=`
+
+
+
+
+
+
+
+
+### `maxWait`
+
+The maximum amount of time (in milliseconds) to block before throwing an exception when the connection pool is exhausted. It has default value `15000`
+
 ## Notes
 
 * The docker entrypoint will upgrade operating system at each startup.
